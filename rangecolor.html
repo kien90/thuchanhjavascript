@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change ranger color</title>
+</head>
+<body>
+    <div id="coloroutput" style="line-height: 90px;width: 40%;; background-color: rgb(146, 146, 238);">
+    <h2 id="coloroutputtext" style="color:rgb(38, 12, 211);text-align: center;">rgb(106, 90, 205)</h2>
+    </div>
+
+    <div style="text-align: center;display: inline-block;">
+        <label for="red">Red</label><br>
+        <input onchange="changeRGB()" oninput="changeRGB()" id="red" name="red" type="range" min="0" max="255"><br> 
+        <label for="green">Green</label><br>
+        <input onchange="changeRGB()" oninput="changeRGB()"  id="green" name="green" type="range" min="0" max="255" ><br>
+        <label for="blue">Blue</label><br>
+        <input onchange="changeRGB()" oninput="changeRGB()"  id="blue" name="blue" type="range" min="0" max="255" >
+    </div>
+    <script>
+        function changeRGB(){
+    var red = document.getElementById('red').value;
+    var green = document.getElementById('green').value;
+    var blue = document.getElementById('blue').value;
+    var col= 'rgb(' + red + ',' + green + ',' + blue + ')';
+        document.getElementById ('coloroutput').style.backgroundColor= col;
+        document.getElementById ('coloroutputtext').innerHTML=col;
+
+     }
+        
+    </script>
+</body>
+</html>
