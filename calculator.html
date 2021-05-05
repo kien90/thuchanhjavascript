@@ -30,18 +30,18 @@
         document.getElementById('result').innerHTML= num1 + num2 ;
     }
     function subby() {
-        num1=document.getElementById('firstnumber').value;
-        num2=document.getElementById('secondnumber').value;
+        num1=parseFloat(document.getElementById('firstnumber').value);
+        num2=parseFloat(document.getElementById('secondnumber').value);
         document.getElementById('result').innerHTML=num1-num2;
     }
     function mulby() {
-        num1=document.getElementById('firstnumber').value;
-        num2=document.getElementById('secondnumber').value;
-        document.getElementById('result').innerHTML=num1*num2;
+        num1=parseFloat(document.getElementById('firstnumber').value);
+        num2=parseFloat(document.getElementById('secondnumber').value);
+      document.getElementById('result').innerHTML=num1*num2;
     }
     function divideby() {
-        num1=document.getElementById('firstnumber').value;
-        num2=document.getElementById('secondnumber').value;
+        num1=parseFloat(document.getElementById('firstnumber').value);
+        num2=parseFloat(document.getElementById('secondnumber').value);
         document.getElementById('result').innerHTML=num1/num2;
     }
 </script>
