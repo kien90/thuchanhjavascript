@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a simple calculator</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="firstnumber">
+        <input type="text" id="secondnumber">
+        <br><br>
+        <div>
+            <input type="button" onclick="addby()" value="Addition(+)">
+            <input type="button" onclick="subby()" value="subtraction(-)">
+            <input type="button" onclick="mulby()" value="multiplication(X)">
+            <input type="button" onclick="divideby()" value="division(/)">
+        </div>
+    </form>
+    <br>
+    <p>
+        Result is:&nbsp;<span id="result"></span>
+    </p>
+</body>
+<script>
+    function addby() {
+        num1=parseFloat(document.getElementById('firstnumber').value);
+        num2=parseFloat(document.getElementById('secondnumber').value);
+        document.getElementById('result').innerHTML= num1 + num2 ;
+    }
+    function subby() {
+        num1=document.getElementById('firstnumber').value;
+        num2=document.getElementById('secondnumber').value;
+        document.getElementById('result').innerHTML=num1-num2;
+    }
+    function mulby() {
+        num1=document.getElementById('firstnumber').value;
+        num2=document.getElementById('secondnumber').value;
+        document.getElementById('result').innerHTML=num1*num2;
+    }
+    function divideby() {
+        num1=document.getElementById('firstnumber').value;
+        num2=document.getElementById('secondnumber').value;
+        document.getElementById('result').innerHTML=num1/num2;
+    }
+</script>
+
+
+</html>
