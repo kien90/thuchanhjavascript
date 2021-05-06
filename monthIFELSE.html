@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let MonthN=prompt('enter month');
+        let n=parseInt(MonthN);
+        if(n==1||n==3||n==5||n==7||n==8||n==10||n==12)
+        {alert('Tháng có số ngày là 31');}
+        else if(n==4||n==6||n==9||n==11) 
+                {alert('Tháng có số ngày là 30');}
+             else if(n==2) 
+                {alert('Tháng có số ngày là 28 hoặc 29');}
+                else {alert('Không hợp lệ,hãy nhập lại từ 1 đến 12');}
+    </script>
+</body>
+</html>
