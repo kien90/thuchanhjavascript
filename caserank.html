@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng switch case xếp loại học lực</title>
+</head>
+<body>
+    <script>
+        var  n=parseFloat(prompt('enter point'));
+          switch (
+              (n<=10&&n>=9)?9: (n<9&&n>=8)? 8 : (n<8&&n>=7)?7: (n<7&&n>=6)?6 : (n<6&&n>=5)?5:(n<5&&n>=0)?0 : 
+              (n<0&&n>10)?null:null
+          )
+          {
+            case 0:           
+            case 1:           
+            case 2:         
+            case 3:
+            case 4:
+            alert('Xep loai yeu');
+            break;
+            case 5:
+            alert('Xep loai tb');
+            break;
+            case 6:
+            alert('Xep loai tb');
+            break;
+            case 7:
+            alert('Xep loai kha');
+            break;
+            case 8:
+            alert('Xep loai gioi');
+            break;
+            case 9:
+            alert('Xep loai sx');
+            break;
+            case 10:
+            alert('Xep loai sx');
+            break;
+            default: alert('ko xep hang, nhap lai');
+        }
+    </script>
+</body>
+</html>
