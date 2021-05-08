@@ -23,6 +23,11 @@
     <div>
         <button onclick="showmessage3()";>Click me</button>  
     </div>
+    <br><br>
+    <div>
+        <button id="messagebutton4" onclick="showmessage4()";>Click me</button>  
+    </div>
+
 
     <script>
          function showmessage() {
@@ -35,6 +40,13 @@
             document.write('Xin chào!');
         } 
         function showmessage3() {
+            console.log('Xin chào!');
+        }
+
+        function showmessage4() {
+            alert('Xin chào!'); 
+            document.getElementById('messagebutton4').innerHTML='Xin chào!';
+            document.write('Xin chào!');
             console.log('Xin chào!');
         }
     </script>

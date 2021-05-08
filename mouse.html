@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p onmouseover="mouseover()" onmouseout="mouseout()" id="test">THIS IS A PLAN WHICH I WANT TO TEST</p>
+    <script>
+     var test=document.getElementById('test');
+        test.addEventListener('mouseover',mouseover);
+        test.addEventListener('mouseout',mouseout)
+        /*function mouseover() {
+            document.getElementById("test").style.color="red";
+        }
+        function mouseout() {
+            document.getElementById('test').style.color='yellow';
+        }*/
+    </script>
+
+    <p onclick="do_something()">Xin chao</p>
+
+    <script>
+        function do_something() {alert(dontmind);
+
+        }
+    </script>
+</body>
+
+
+</html>
