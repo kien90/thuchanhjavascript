@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse event</title>
+</head>
+<body>
+    <form>
+        <img id="myimage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZR9G20bL7x3BrUehF1ORgSL7IVmZaT_j-2Q&usqp=CAU"/><br><br>
+        <p>Click button Below to move the image to right </p>
+        <button onclick="moveright();" value="Click me">Click me</button>
+
+    </form>
+</body>
+<script>
+    debugger
+    let ball=null;
+        step=500;
+    function init(){
+        ball= document.getElementById('myimage');
+        ball.style.position='relative';
+        ball.style.left='0px';
+                     }
+    function moveright() {
+        //if (parseInt(ball.style.left) + ball.width + step < window.innerWidth){
+     ball.style.left=parseInt(ball.style.left)+step+'px';}
+    //}
+    
+window.onload=init;
+</script>
+</html>
