@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>move nobita</title>
+</head>
+<body >
+    <img id="manga" style="width: 80px;height: 100px;position: absolute;left: 0;top: 0;" 
+    src="https://james.codegym.vn/pluginfile.php/27447/mod_assign/intro/1.png";>
+</body>
+<script>
+    debugger
+function upArrow(){
+ let   img=document.getElementById('manga');
+    img.style.top=parseInt(img.style.top)-5+'px';
+}
+function downArrow(){
+  var  img=document.getElementById('manga');
+    img.style.top=parseInt(img.style.top)+5+'px';
+}
+function leftArrow(){
+ var   img=document.getElementById('manga');
+    img.style.left=parseInt(img.style.left)-5+'px';
+}
+function rightArrow(){
+  var  img=document.getElementById('manga');
+    img.style.left=parseInt(img.style.left)+5+'px';
+}
+function moveSelection(evt) {
+    switch (evt.keycode) {
+        case 37: {leftArrow();}
+        break;
+        case 38: {upArrow();}
+        break;
+        case 39: {rightArrow();}
+        break;
+        case 40: {downArrow();}
+        break;
+        default:{
+            alert('please using one in four key arrows (top, right, down, left)');
+    }
+}
+    window.addEventListener("keydown",moveSelection);
+}
+
+
+
+
+</script>
+</html>
