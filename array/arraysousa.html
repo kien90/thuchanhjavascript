@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            padding: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width:300px;">
+        <input type="text" id="text" />
+        <input type="button" value="Add" onclick="clikc_Add()" />
+        <input type="button" value="Display" onclick="click_Display()">
+        <br><br>
+        <p><span id="result"></span></p>
+    </div>
+</body>
+<script>
+    var arr = [];
+    let x = 0;
+
+    function clikc_Add() {
+        arr[x] = document.getElementById('text').value;
+        alert("Element:"+arr[x]+"added at "+x);
+        x++;
+        document.getElementById('text').value="";
+    }
+    let e =" ";
+    function click_Display() {
+        // let e="<hr/>";
+        for (i in arr) {
+             e +="Element"+i+"="+arr[i]+"<br/>";
+        }
+        document.getElementById("result").innerHTML=e;
+    }
+
+</script>
+
+</body>
+
+</html>
