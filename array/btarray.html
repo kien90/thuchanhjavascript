@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = [];
+        let min = 10;
+        let max = 60;
+        let size = 10;
+        let i;
+        let j;
+
+        for (let i = 0; i < size; i++) {
+            x[i] = [];
+            for (let j = 0; j < size; j++) {
+                x[i][j] = Math.floor(Math.random() * (max - min + 1) + min);
+                document.write(x[i][j] + " | ");
+            }
+            document.write('<br>');
+        }
+
+        // for (i = 0; i < size; i++) {
+        //     let sum = 0;
+        //     for (let j = 0; j < size; j++) {
+        //         sum += x[i][j];
+        //     }
+        //     document.write(sum + '<br>');
+        // }
+
+        // let sout = "<table border='1'cellspacing='0' cellpadding='6' width='600'>"
+        // for (i = 0; i < size; i++) {
+
+        //     sout = sout + "<tr>" ;
+        //     {
+        //         for (j = 0; j < size; j++) {
+        //             sout = sout + "<td>" + `${x[i][j]}` + "</td>";
+        //         }
+        //     }
+        //     sout = sout + "<tr>" ;
+        // }
+        // sout = sout + "</table>";
+        // document.write(sout);
+
+        let sout = "<table border='1'cellspacing='0' cellpadding='6' width='600'>"
+        for (i = 0; i < size; i++) {
+
+            sout = sout + "<tr>";
+            {
+                for (j = 0; j < size; j++) {
+                    if (x[i][j] % 5 == 0) {
+                        sout = sout + "<td>" + `${x[i][j]}` + "</td>";
+                    }
+                    else { sout = sout + "<td>" + '___' + "</td>"; }
+                }
+            }
+        }
+        sout = sout + "<tr>";
+        
+        sout = sout + "</table>";
+        document.write(sout);
+
+        let sum = 0;
+        for (i = 0,j = 0; i,j < size; i++,j++) {
+           
+                sum += x[i][j];
+            }
+            document.write('Tổng đường chéo chính là'+' ' +sum+'<br>');
+        
+          let sum1=0;  
+        for (i =0 ,j = size - 1; i< size,j>=0; i++,j--) {
+           
+                sum1 += x[i][j];
+            }
+            document.write('Tổng đường chéo phụ là'+' ' +sum1);
+
+    </script>
+</body>
+
+</html>
